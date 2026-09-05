@@ -4,7 +4,7 @@ import hashlib,json,os,re,sys
 
 ALLOWED_ROOT={"README.md","public-manifest.json",".github","tools","assets"}
 ALLOWED_CONTROL={"README.md","public-manifest.json",".github/workflows/validate-public-art.yml","tools/validate_public_art.py","tools/test_public_art.py"}
-IMG_EXT={".png",".jpg",".jpeg",".webp",".gif"};MAX_BYTES=10*1024*1024
+IMG_EXT={".png",".jpg",".jpeg",".webp",".gif",".svg"};MAX_BYTES=10*1024*1024
 FORBID=re.compile(r"(^|[\/_.:-])(dm|dmhold|dm_hold|dm-only|dm_only|secret|unreleased|spoiler)([\/_.:-]|$)",re.I)
 ARCH={".zip",".7z",".rar",".tar",".gz",".tgz",".bz2"};APPROVAL=re.compile(r"^[A-Za-z0-9._:-]{8,128}$")
 ASSET_KEYS={"path","public_id","classification","sha256","bytes","approval_ref"};TOP_KEYS={"schema_version","repository_purpose","assets"}
@@ -16,11 +16,12 @@ def _sha256(p):
  return h.hexdigest()
 
 def _sig_ok(p):
- b=p.read_bytes()[:16];e=p.suffix.lower()
+ b=p.read_bytes()[:512];e=p.suffix.lower()
  return ((e==".png" and b.startswith(b"\x89PNG\r\n\x1a\n")) or
          (e in {".jpg",".jpeg"} and b.startswith(b"\xff\xd8\xff")) or
          (e==".webp" and len(b)>=12 and b[:4]==b"RIFF" and b[8:12]==b"WEBP") or
-         (e==".gif" and b.startswith((b"GIF87a",b"GIF89a"))))
+         (e==".gif" and b.startswith((b"GIF87a",b"GIF89a"))) or
+         (e==".svg" and b"<svg" in b.lower()))
 
 def validate(root):
  root=Path(root).resolve();err=[];man=root/"public-manifest.json"
@@ -97,6 +98,6 @@ def main():
   return 1
  adir=root/"assets";n=sum(1 for p in adir.rglob("*") if p.is_file()) if adir.exists() else 0
  print(f"TOTFR PUBLIC ART VALIDATION PASSED: assets={n}")
- print("END-OF-FILE SENTINEL: TOTFR-PUBLIC-ART-VALIDATOR-2026-09-05-V2")
+ print("END-OF-FILE SENTINEL: TOTFR-PUBLIC-ART-VALIDATOR-2026-09-05-V2-SVG")
  return 0
 if __name__=="__main__":raise SystemExit(main())
