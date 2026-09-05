@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "repository_purpose": "PLAYER_SAFE_PUBLIC_NOTION_ART",
+  "assets": [
+    {
+      "path": "assets/canary/notion-cover-1500x600.svg",
+      "public_id": "notion-cover-canary-1500x600",
+      "classification": "PLAYER_SAFE",
+      "sha256": "18caa735256bef3580abe95bb59faf70776b300a24338a239b2035a627e87033",
+      "bytes": 1948,
+      "approval_ref": "approval:canary1500"
+    }
+  ]
+}
