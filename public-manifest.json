@@ -1,5 +1,14 @@
 {
   "schema_version": 1,
   "repository_purpose": "PLAYER_SAFE_PUBLIC_NOTION_ART",
-  "assets": []
+  "assets": [
+    {
+      "path": "assets/canary/bootstrap.png",
+      "public_id": "bootstrap-canary-png",
+      "classification": "PLAYER_SAFE",
+      "sha256": "431ced6916a2a21a156e38701afe55bbd7f88969fbbfc56d7fe099d47f265460",
+      "bytes": 68,
+      "approval_ref": "approval:bootstrap-canary"
+    }
+  ]
 }
