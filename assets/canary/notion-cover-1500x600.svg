@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600" viewBox="0 0 1500 600">
+<rect width="1500" height="600" fill="#111"/>
+<rect x="0" width="500" height="600" fill="#8b1111"/>
+<rect x="1000" width="500" height="600" fill="#ddd"/>
+<rect x="300" y="120" width="900" height="360" fill="none" stroke="#ffd700" stroke-width="10"/>
+<g stroke="#00ffff" stroke-width="4">
+<line x1="0" y1="0" x2="0" y2="600"/><line x1="50" y1="0" x2="50" y2="600"/>
+<line x1="1450" y1="0" x2="1450" y2="600"/><line x1="1498" y1="0" x2="1498" y2="600"/>
+<line x1="0" y1="0" x2="1500" y2="0"/><line x1="0" y1="50" x2="1500" y2="50"/>
+<line x1="0" y1="550" x2="1500" y2="550"/><line x1="0" y1="598" x2="1500" y2="598"/>
+</g>
+<g stroke="#ff00ff" stroke-width="10">
+<line x1="0" y1="0" x2="180" y2="180"/><line x1="0" y1="180" x2="180" y2="0"/>
+<line x1="1320" y1="0" x2="1500" y2="180"/><line x1="1320" y1="180" x2="1500" y2="0"/>
+<line x1="0" y1="420" x2="180" y2="600"/><line x1="0" y1="600" x2="180" y2="420"/>
+<line x1="1320" y1="420" x2="1500" y2="600"/><line x1="1320" y1="600" x2="1500" y2="420"/>
+</g>
+<text x="750" y="285" text-anchor="middle" font-family="Arial,sans-serif" font-size="72" font-weight="700" fill="#fff" stroke="#000" stroke-width="2">TOTFR NOTION COVER CANARY</text>
+<text x="750" y="355" text-anchor="middle" font-family="Arial,sans-serif" font-size="36" font-weight="700" fill="#ffd700">1500 × 600 | CENTER SAFE ZONE</text>
+<text x="70" y="105" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="#fff">LEFT EDGE</text>
+<text x="1260" y="105" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="#000">RIGHT EDGE</text>
+<text x="750" y="38" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#fff">TOP EDGE</text>
+<text x="750" y="585" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#fff">BOTTOM EDGE</text>
+</svg>
